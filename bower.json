@@ -17,6 +17,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1"
-  }
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {}
 }

@@ -27,13 +27,88 @@
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="main-wrapper">
 
 		//= _header.html
 
-		<div class="container">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim porro ratione expedita hic delectus quibusdam magnam voluptas quaerat, doloremque veritatis cum omnis dignissimos error natus. Placeat ut est illum.</p>
-		</div>
+		<main>
+			<section class="section-banner">
+				<div class="section-banner__slider">
+					<div class="section-banner__item">
+						<img class="banner__item__img" src="img/bg-banner.png" alt="slider-bg">
+						<div class="section-banner__content">
+							<h1 class="section-banner__heading">This is a main heading</h1>
+							<p class="section-banner__text">Lorem Ipsum is simply dummy text of the printing</p>
+							<a class="section-banner__link" href="#">Learn More</a>
+						</div>
+					</div>
+					<div class="section-banner__item">
+						<img class="banner__item__img" src="img/bg-banner.png" alt="slider-bg">
+						<div class="section-banner__content">
+							<h1 class="section-banner__heading">This is a main heading</h1>
+							<p class="section-banner__text">Lorem Ipsum is simply dummy text of the printing</p>
+							<a class="section-banner__link" href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-team" id="anchor-team">
+				<div class="container">
+					<h2 class="section-team__heading">The Team</h2>
+					<div class="section-team__wrapper">
+						<a class="section-team__item-box" href="#">
+							<div class="section-team__item">
+								<div class="section-team__photo">
+									<div class="section-team__photo-inner">
+										<div class="photo-inner__item"></div> <!--эти дополнительные блоки сделал чтобы не использовать js для респонсива дива photo-->
+									</div>
+								</div>
+								<p class="section-team__name">Adrian Thomas</p>
+								<p class="section-team__position">CEO &amp; Founder</p>
+								<p class="section-team__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+							</div>
+						</a>
+						<a class="section-team__item-box" href="#">
+							<div class="section-team__item">
+								<div class="section-team__photo">
+									<div class="section-team__photo-inner">
+										<div class="photo-inner__item"></div>
+									</div>
+								</div>
+								<p class="section-team__name">Narate Ketram</p>
+								<p class="section-team__position">Creative Director</p>
+								<p class="section-team__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+							</div>
+						</a>
+						<a class="section-team__item-box" href="#">
+							<div class="section-team__item">
+								<div class="section-team__photo">
+									<div class="section-team__photo-inner">
+										<div class="photo-inner__item"></div>
+									</div>
+								</div>
+								<p class="section-team__name">Fernando Comet</p>
+								<p class="section-team__position">CEO &amp; Founder</p>
+								<p class="section-team__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+							</div>
+						</a>
+						<a class="section-team__item-box" href="#">
+							<div class="section-team__item">
+								<div class="section-team__photo">
+									<div class="section-team__photo-inner">
+										<div class="photo-inner__item"></div>
+									</div>
+								</div>
+								<p class="section-team__name">Adedayo saheed</p>
+								<p class="section-team__position">Creative Director</p>
+								<p class="section-team__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+		</main>
 
 		//= _footer.html
 

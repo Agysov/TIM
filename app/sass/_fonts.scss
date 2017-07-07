@@ -1,4 +1,6 @@
 @import "_mixins/font-face";
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("Lobster1.4", "../fonts/Lobster1.4/Lobster1.4");
+@include font-face("Open Sans", "../fonts/OpenSans/OpenSans");
+@include font-face("Open Sans", "../fonts/OpenSansSemibold/OpenSansSemibold", 600);
+@include font-face("Open Sans", "../fonts/OpenSansExtrabold/OpenSansExtrabold", 800);
