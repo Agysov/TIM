@@ -16,9 +16,9 @@
 
 body{
 	line-height: 1;
-	font-family: $default-font;
 	font-weight: 400;
 	color: #fff;
+	font-family: $default-font;
 }
 
 ol, ul{
@@ -29,20 +29,6 @@ footer, header, nav, section, main{
 	display: block;
 }
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{
-    font: inherit;
-    font-style: inherit;
-    font-variant-ligatures: inherit;
-    font-variant-caps: inherit;
-    font-variant-numeric: inherit;
-    font-weight: inherit;
-    font-stretch: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-family: inherit;
-    vertical-align: baseline;
-}
-
 .clearfix:after{
 	content: "";
 	display: block;
@@ -51,7 +37,8 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 	visibility: hidden;
 }
 
-.main-wrapper{
+.wrapper{
+	position: relative;
 	width: 1440px;
 	margin: 0 auto;
 	overflow: hidden;

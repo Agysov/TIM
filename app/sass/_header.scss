@@ -1,16 +1,19 @@
 .header{
-	//position: fixed;
 	width: 100%;
 	z-index: 10000;
 	background-color: #fff;
 	line-height: 24px;
 }
 
+.header__logo-box{
+	float: left;
+}
+
 .header__logo{
 	font-family: "Lobster1.4";
 	font-size: 43px;
+	font-weight: 400;
 	margin: 35px 0;
-	float: left;
 
 	a{
 		color: #44c0c2;
@@ -19,7 +22,7 @@
 
 .header__nav{
 	float: right;
-	font-family: $default-font;
+	font-size: 15px;
 }
 
 .header__menu-ico{
@@ -27,34 +30,41 @@
 }
 
 .nav__item{
-	display: inline-block;
+	float: left;
+
+	&.active .nav__link{
+		background-color: #f8f9fb;
+		color: $hover-color-blue;
+
+		&:before{
+			display: inline-block;
+		}
+	}
 }
 
 .nav__link{
 	position: relative;
-	font-size: 15px;
-	line-height: 24px;
 	color: #484c55;
 	display: inline-block;
-	padding: 37px 25px;
-}
+	padding: 37px 25px 39px;
 
-.nav__link:hover{
-	background-color: #f8f9fb;
-	color: $hover-color-blue;
-}
+	&:hover{
+		background-color: #f8f9fb;
+		color: $hover-color-blue;
+	}
 
-.nav__link:before{
-	content: "";
-	position: absolute;
-	display: none;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background-color: $hover-color-blue;
-}
+	&:before{
+		content: "";
+		position: absolute;
+		display: none;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: $hover-color-blue;
+	}
 
-.nav__link:hover:before{
-	display: inline-block;
+	&:hover:before{
+		display: inline-block;
+	}
 }
