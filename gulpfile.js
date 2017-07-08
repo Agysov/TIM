@@ -41,7 +41,7 @@ gulp.task('script-js', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-// Раскоментировать если нужно склеить vendor.min.js и script.min.js и добавить этот таск в таск watch
+// Раскоментировать если нужно склеить vendor.min.js и script.min.js и добавить этот таск в таск watch или build
 
 // gulp.task('js', ['vendor-js', 'script-js'], function() {
 // 	return gulp.src([
@@ -66,7 +66,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('vendor-sass', function() {
 	return gulp.src('app/sass/vendor.+(sass|scss)')
-	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+	.pipe(sass({outputStyle: 'compressed'}).on("error", notify.onError()))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(rename({basename: "vendor"}))
 	//.pipe(cleanCSS()) // Раскомментировать если в vendor.scss подключены НЕминифицированные файлы

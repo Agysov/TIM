@@ -2,7 +2,6 @@
 
 .section-banner{
 	font-family: $default-font;
-	// margin-top: 100px;
 }
 
 .section-banner__slider{
@@ -91,7 +90,7 @@
 // Section Team
 
 .section-team{
-	margin: 100px 0 77px;
+	margin: 100px 0 102px;
 }
 
 .section-team__heading{
@@ -174,4 +173,69 @@
 	line-height: 26px;
 }
 
-//
+// Section Plans
+
+.section-plans{
+	background-color: #f1f1f1;
+	padding: 118px 0 100px;
+}
+
+.section-plans__wrapper{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.section-plans__item{
+	width: 31.7%;
+	border-radius: 3px;
+	border: 1px solid #ecf0f1;
+	background-color: #f8f9fb;
+}
+
+.section-plans__name{
+	background-color: #485460;
+	color: #fff;
+	font-size: 26px;
+	line-height: 48px;
+	border-radius: 3px 3px 0 0;
+	text-align: center;
+	padding: 12px 0 15px;
+}
+
+.section-plans__price{
+	color: #485460;
+	font-size: 20px;
+	line-height: 48px;
+	text-align: center;
+	padding: 12px 0 8px;
+	border-bottom: 1px solid #ecf0f1;
+}
+
+.section-plans__string{
+	text-align: center;
+	background-color: #fff;
+	color: #8c9299;
+	font-size: 14px;
+	line-height: 45px;
+	padding-right: 10px;
+	border-bottom: 1px solid #ecf0f1;
+}
+
+.section-plans__btn{
+	font-family: $default-font;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 40px;
+	color: #fff;
+	display: block;
+	border-radius: 3px;
+	width: 46%;
+	background-color: #788492;
+	margin: 29px auto;
+	text-align: center;
+
+	&:hover{
+		background-color: $hover-color-blue;
+	}
+}
