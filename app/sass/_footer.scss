@@ -7,7 +7,7 @@
 	background-color: #181818;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 107px 0 102px 11px;
+	padding: 107px 0 99px;
 }
 
 .footer__heading{
@@ -22,12 +22,10 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	align-items: flex-start;
 }
 
 .footer__info{
-	max-width: 49%;
-	float: left;
+	max-width: 37%;
 }
 
 .footer__touch{
@@ -43,4 +41,127 @@
 	color: #fff;
 	opacity: 0.5;
 	margin-bottom: 38px;
+}
+
+.footer__social{
+	min-width: 156px;
+	margin-bottom: 16px;
+}
+
+.footer__social-ico{
+	display: inline-block;
+	position: relative;
+	float: left;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 23px;
+	line-height: 24px;
+	width: 42px;
+	height: 42px;
+	text-align: center;
+	margin: 0 auto;
+
+	@extend %icon-before;
+
+	&:nth-child(2n){
+		margin: 0 15px;
+	}
+}
+
+%icon-before{
+
+	&:before{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+	}
+}
+
+.icon-facebook{
+	background-color: #3b5997;
+}
+
+.icon-twitter{
+	background-color: #3ec2f3;
+}
+
+.icon-gplus{
+	background-color: #e44c41;
+}
+
+.footer__link{
+	display: block;
+	font-family: "Myriad Pro";
+	color: #bface2;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.footer__link_tel{
+	font-family: $default-font;
+}
+
+%form-text-style{
+	font-family: $default-font;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding: 10px 19px;
+	border-radius: 3px;
+	float: left;
+
+	&::placeholder{
+		color: #c1c1c1;
+		font-family: $default-font;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus::placeholder{
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+}
+
+.footer__form{
+	max-width: 49%;
+	float: right;
+
+	input{
+		@extend %form-text-style;
+
+		width: 47%;
+
+	}
+
+	textarea{
+		@extend %form-text-style;
+
+		padding: 16px 20px;
+		margin-top: 31px;
+		width: 570px;
+		height: 179px;
+		resize: none;
+		overflow: auto;
+	}
+
+	.footer__btn{
+		width: 30%;
+		background-color: #49cbcd;
+		color: #fff;
+		font-size: 22px;
+		float: right;
+		margin-top: 31px;
+		padding: 10px 65px 16px 54px;
+		cursor: pointer;
+	}
+}
+
+.footer__input_name{
+	margin-right: 5.3%;
 }

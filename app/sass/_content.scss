@@ -69,7 +69,6 @@
 	color: $color-white;
 	text-align: center;
 	margin-bottom: 54px;
-	// можно было подогнать падингом но я решил что это неоптимально
 }
 
 .banner__box-link{
@@ -102,21 +101,23 @@
 }
 
 .section-team__wrapper{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-top: 133px;
 }
 
 .section-team__item{
-	float: left;
 	width: 23%;
-	margin: 0 1.33%;
+	// margin: 0 1.33%;
 
-	&:first-child{
-		margin-left: 0;
-	}
+	// &:first-child{
+	// 	margin-left: 0;
+	// }
 
-	&:last-child{
-		margin-right: 0;
-	}
+	// &:last-child{
+	// 	margin-right: 0;
+	// }
 }
 
 .section-team__photo{

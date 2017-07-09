@@ -67,7 +67,7 @@ gulp.task('browser-sync', function() {
 gulp.task('vendor-sass', function() {
 	return gulp.src('app/sass/vendor.+(sass|scss)')
 	.pipe(sass({outputStyle: 'compressed'}).on("error", notify.onError()))
-	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(autoprefixer(['last 5 versions']))
 	.pipe(rename({basename: "vendor"}))
 	//.pipe(cleanCSS()) // Раскомментировать если в vendor.scss подключены НЕминифицированные файлы
 	.pipe(rename({suffix: '.min'}))
@@ -78,7 +78,7 @@ gulp.task('vendor-sass', function() {
 gulp.task('style-sass', function() {
 	return gulp.src(['!app/sass/**/vendor.+(sass|scss)', 'app/sass/**/*.+(sass|scss)'])
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(autoprefixer(['last 5 versions']))
 	.pipe(rename({basename: "style"}))
 	.pipe(gulp.dest('app/css'))
 	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
