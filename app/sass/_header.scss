@@ -38,6 +38,7 @@
 
 		&:before{
 			display: inline-block;
+			width: 100%;
 		}
 	}
 }
@@ -46,25 +47,28 @@
 	position: relative;
 	color: #484c55;
 	display: inline-block;
-	padding: 37px 25px 38px;
+	padding: 37px 25px 39px;
+	transition: all 0.3s ease;
 
 	&:hover{
 		background-color: #f8f9fb;
 		color: $hover-color-blue;
+		transition: all 0.3s ease;
 	}
 
 	&:before{
 		content: "";
 		position: absolute;
-		display: none;
 		bottom: 0;
 		left: 0;
-		width: 100%;
+		width: 0;
 		height: 3px;
 		background-color: $hover-color-blue;
+		transition: width 0.3s ease;
 	}
 
 	&:hover:before{
-		display: inline-block;
+		width: 100%;
+		transition: width 0.3s ease;
 	}
 }

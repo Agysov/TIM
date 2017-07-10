@@ -19,6 +19,12 @@
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		z-index: 3;
+		transition: all 0.3s ease;
+
+		&:hover{
+			transform: scale(1.1);
+			transition: all 0.3s ease;
+		}
 	}
 
 	.slick-prev{
@@ -29,6 +35,35 @@
 	.slick-next{
 		right: 29px;
 		background-image: url(../img/right-arrow.png);
+	}
+
+	.slick-dots {
+		position: absolute;
+		left: 50%;
+		bottom: -26px;
+		-webkit-transform: translate(-50%);
+		transform: translate(-50%);
+	}
+
+	.slick-dots li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	.slick-dots li button {
+		background-color: $hover-color-blue;
+		opacity: .5;
+		outline: none;
+		border: none;
+		text-indent: -9999px;
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+		cursor: pointer;
+	}
+
+	.slick-dots .slick-active button {
+		opacity: 1;
 	}
 }
 
@@ -45,9 +80,9 @@
 
 .section-banner__content{
 	position: absolute;
-	width: 47%;
-	top: 50.4%;
-	left: 51.5%;
+	width: 674px;
+	top: 48.4%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
@@ -55,10 +90,10 @@
 	display: inline-block;
 	font-weight: 600;
 	font-size: 63px;
-	line-height: 24px;
+	line-height: 65px;
 	color: $color-white;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.16);
-	margin-bottom: 48px;
+	margin-bottom: 28px;
 }
 
 .section-banner__text{
@@ -77,6 +112,7 @@
 
 .section-banner__link{
 	display: inline-block;
+	background-color: transparent;
 	color: $color-white;
 	border: 3px solid $color-white;
 	border-radius: 5px;
@@ -84,6 +120,12 @@
 	font-size: 26px;
 	line-height: 24px;
 	padding: 19px 40px;
+	transition: all 0.3s ease;
+
+	&:hover{
+		background-color: rgba(255,255,255,.2);
+		transition: all 0.3s ease;
+	}
 }
 
 // Section Team
@@ -109,15 +151,6 @@
 
 .section-team__item{
 	width: 23%;
-	// margin: 0 1.33%;
-
-	// &:first-child{
-	// 	margin-left: 0;
-	// }
-
-	// &:last-child{
-	// 	margin-right: 0;
-	// }
 }
 
 .section-team__photo{
@@ -129,19 +162,23 @@
 
 	&:before{
 		content: "+";
-		display: none;
+		display: inline-block;
 		color: #f46d6d;
+		opacity: 0;
 		font-size: 85px;
 		font-family: $default-font;
 		font-weight: 800;
 		position: absolute;
-		top: 50%;
+		top: 0;
 		left: 50%;
 		transform: translate(-41%, -51%);
+		transition: all 0.3s ease;
 	}
 
 	&:hover:before{
-		display: inline-block;
+		opacity: 1;
+		top: 50%;
+		transition: all 0.3s ease;
 	}
 }
 
@@ -170,6 +207,8 @@
 
 .section-team__about{
 	@extend %team-item-text;
+	text-align: justify;
+	text-align-last: center;
 	font-size: 14px;
 	line-height: 26px;
 }
@@ -231,12 +270,15 @@
 	color: #fff;
 	display: block;
 	border-radius: 3px;
+	-web-kit-border-radius: 3px;
 	width: 46%;
 	background-color: #788492;
 	margin: 29px auto;
 	text-align: center;
+	transition: all 0.3s ease;
 
 	&:hover{
 		background-color: $hover-color-blue;
+	transition: all 0.3s ease;
 	}
 }
