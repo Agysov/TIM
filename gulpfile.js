@@ -31,8 +31,8 @@ gulp.task('vendor-js', function() {
 // мои скрипты
 
 gulp.task('script-js', function() {
-	return gulp.src(['!app/js/script.js', '!app/js/script.min.js', '!app/js/vendor.min.js', 'app/js/*.js'])
-	// .pipe(rigger()) // Раскоментировать если в main.js подклюены файлы
+	return gulp.src(['!app/js/script.js', '!app/js/script.min.js', '!app/js/vendor.min.js', 'app/js/[^_]*.js'])
+	.pipe(rigger()) // Раскоментировать если в main.js подклюены файлы
 	.pipe(rename({basename: "script"}))
 	.pipe(gulp.dest('app/js'))
 	.pipe(uglify())

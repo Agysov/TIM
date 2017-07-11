@@ -3,6 +3,13 @@
 	z-index: 10000;
 	background-color: #fff;
 	line-height: 24px;
+	transition: top .5s ease;
+}
+
+.h-scroll{
+	position: fixed;
+	left: 0;
+	transition: top .5s ease;
 }
 
 .header__logo-box{
