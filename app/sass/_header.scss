@@ -3,13 +3,12 @@
 	z-index: 10000;
 	background-color: #fff;
 	line-height: 24px;
-	transition: top .5s ease;
 }
 
 .h-scroll{
 	position: fixed;
+	top: 0;
 	left: 0;
-	transition: top .5s ease;
 }
 
 .header__logo-box{
@@ -78,4 +77,25 @@
 		width: 100%;
 		transition: width 0.3s ease;
 	}
+}
+
+.mobile-menu-ico{
+	display: none;
+}
+
+@import "_mixins/burger-ico";
+
+.menu-button {
+	display: inline-block;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.burger-icon {
+	@include burger(35px, 4px, 7px, #444);
+}
+
+.menu-button.is-active .burger-icon {
+	@include burger-to-cross;
 }

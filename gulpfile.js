@@ -19,19 +19,19 @@ var	gulp           = require('gulp'),
 //  Скрипты bower компонентов
 
 gulp.task('vendor-js', function() {
-	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/dist/js/bootstrap.min.js',
-		'app/libs/slick-carousel/slick/slick.min.js', // Добавить вконце *.min.js нового bower компонента
-		])
-	.pipe(concat('vendor.min.js'))
-	.pipe(gulp.dest('app/js'));
+	return gulp.src('app/js/dev_files/_vendor.js')
+	.pipe(rigger()) // Раскоментировать если в main.js подклюены файлы
+	.pipe(rename({basename: "vendor"}))
+	.pipe(uglify())
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest('app/js'))
+	.pipe(browserSync.reload({stream: true}));
 });
 
 // мои скрипты
 
 gulp.task('script-js', function() {
-	return gulp.src(['!app/js/script.js', '!app/js/script.min.js', '!app/js/vendor.min.js', 'app/js/[^_]*.js'])
+	return gulp.src(['!app/js/dev_files/_vendor.js', 'app/js/dev_files/[^_]*.js'])
 	.pipe(rigger()) // Раскоментировать если в main.js подклюены файлы
 	.pipe(rename({basename: "script"}))
 	.pipe(gulp.dest('app/js'))
@@ -76,7 +76,7 @@ gulp.task('vendor-sass', function() {
 });
 
 gulp.task('style-sass', function() {
-	return gulp.src(['!app/sass/**/vendor.+(sass|scss)', 'app/sass/**/*.+(sass|scss)'])
+	return gulp.src(['!app/sass/**/vendor.+(sass|scss)', 'app/sass/**/[^_]*.+(sass|scss)'])
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(autoprefixer(['last 5 versions']))
 	.pipe(rename({basename: "style"}))
@@ -110,7 +110,7 @@ gulp.task('watch', ['vendor-sass', 'style-sass', 'vendor-js', 'script-js', 'html
 	gulp.watch(['!app/sass/**/vendor.+(sass|scss)', 'app/sass/**/*.+(sass|scss)'], ['style-sass']);
 	gulp.watch('app/sass/**/vendor.+(sass|scss)', ['vendor-sass']);
 	// gulp.watch(['bower.json'], ['vendor-js']);
-	gulp.watch(['!app/js/script.js', '!app/js/script.min.js', '!app/js/vendor.min.js', 'app/js/[^_]*.js'], ['script-js']);
+	gulp.watch(['!app/js/dev_files/_vendor.js', 'app/js/dev_files/[^_]*.js'], ['script-js']);
 	gulp.watch('app/html_dev/*.html', ['html']);
 });
 
