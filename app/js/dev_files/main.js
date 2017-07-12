@@ -29,15 +29,15 @@ $(document).ready(function(){
 			menuScrollClass = 'h-scroll',
 			headerHeight = menu.outerHeight();
 
-		// menu.css('top','-' + headerHeight + 'px');
+		menu.css('top','-' + headerHeight + 'px');
 
 		if ($(this).scrollTop() > 0) {
-			menu.addClass(menuScrollClass);
-			$('body').css('margin-top', headerHeight + 'px');
+			menu.addClass(menuScrollClass).css('top', '0');
+			$('.wrapper').css('padding-top', headerHeight + 'px');
 
 		} else {
 			menu.removeClass(menuScrollClass);
-			$('body').css('margin-top', '0');
+			$('.wrapper').css('padding-top', '0');
 		};
 	});
 
@@ -55,7 +55,6 @@ $(document).ready(function(){
 
 			var anchor = $(id).offset().top - headerHeight;
   			$('body, html').animate({scrollTop: anchor}, 600);
-		// $('.nav__ul').removeClass('mobile-menu_active');
 
 		} else { alert('Такой секции небыло в задании'); }
 
@@ -69,5 +68,6 @@ $(document).ready(function(){
 		$(this).toggleClass('is-active');
 		$('.header__nav').toggleClass('nav-visible');
 	});
+
 
 });

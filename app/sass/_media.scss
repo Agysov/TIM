@@ -242,7 +242,7 @@
 			left: 10px;
 			width: 3px;
 			height: 0;
-		transition: none;
+			transition: none;
 		}
 	}
 
@@ -371,6 +371,18 @@
 	.section-plans__item {
 		width: 100%;
 		margin: 10px;
+	}
+
+	.footer__input{
+		width: 100%;
+	}
+
+	.footer__input_name{
+		margin: 0 0 31px 0;
+	}
+
+	.footer__btn{
+		width: 100%;
 	}
 
 }

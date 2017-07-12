@@ -109,8 +109,8 @@ gulp.task('html', function(){
 gulp.task('watch', ['vendor-sass', 'style-sass', 'vendor-js', 'script-js', 'html', 'browser-sync'], function() {
 	gulp.watch(['!app/sass/**/vendor.+(sass|scss)', 'app/sass/**/*.+(sass|scss)'], ['style-sass']);
 	gulp.watch('app/sass/**/vendor.+(sass|scss)', ['vendor-sass']);
-	// gulp.watch(['bower.json'], ['vendor-js']);
-	gulp.watch(['!app/js/dev_files/_vendor.js', 'app/js/dev_files/[^_]*.js'], ['script-js']);
+	gulp.watch(['app/js/dev_files/_vendor.js'], ['vendor-js']);
+	gulp.watch(['app/js/dev_files/[^_]*.js'], ['script-js']);
 	gulp.watch('app/html_dev/*.html', ['html']);
 });
 
